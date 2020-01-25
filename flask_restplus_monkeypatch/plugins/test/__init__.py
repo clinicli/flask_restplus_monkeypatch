@@ -1,3 +1,3 @@
-def init(app,*args,**kwargs):
+def init(app,**kwargs):
     print("Test loaded!")
     print(kwargs)
