@@ -27,7 +27,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-All fixes are implemented with a simple plugin architecture. All your code should live in `flask_restplus_monkeypatch/plugins/my_jazzy_contribution/__init__.py`. It must contain the function `init(app,**kwars)` which takes the app as the first, obligatory argument, and returns the app. See the `example` plugin as a template.
+All fixes are implemented with a simple plugin architecture. All your code should live in `flask_restplus_monkeypatch/plugins/my_jazzy_contribution/__init__.py`. It must contain the function `init(app,**kwars)` which takes the app as the first, obligatory argument, and returns the app, as well as anything else you need to return. See the `example` plugin as a template.
 
 Add your plugin:
 
@@ -76,7 +76,7 @@ class MyTestCase(unittest.TestCase):
 Run the tests:
 
 ```sh
-python -m unittest discover -s ./tests/
+python -m unittest discover -v -s ./tests/
 ```
 
 If everything is okay, commit the changes to your feature branch and [issue a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) asking to merge the changes into the `dev` branch:
