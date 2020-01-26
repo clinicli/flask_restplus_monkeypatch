@@ -23,13 +23,13 @@ base_url = "/api"
 
 class MyTestCase(unittest.TestCase):
 
-    def test_00100_debug(self):
-        global app, logger, name
-        app = frm.apply(app,debug=True)
+    # def test_00100_debug(self):
+    #     global app, logger, name
+    #     app = frm.apply(app,debug=True)
 
-    def test_00200_example(self):
-        global app, logger, name
-        app, *_ = frm.apply(app,example=True)
+    # def test_00200_example(self):
+    #     global app, logger, name
+    #     app, *_ = frm.apply(app,example=True)
 
     def test_00300_fix_error_router(self):
         global app, logger, name

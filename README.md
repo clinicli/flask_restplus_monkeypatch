@@ -59,14 +59,14 @@ class MyTestCase(unittest.TestCase):
         """
         Put some explanatory docs here if you're conscientious!
         """
-
-        frm.apply(app,
+        global app, base_url, logger, name
+        app = frm.apply(app,
                   my_jazzy_contribution = {
                       "Any other arguments": "required by your plugin",
                       "can go in here": "They will appear in kwargs",
                   }
         )
-        
+
         response = app.test_client().get(base_url + "/a-route-you-added-perhaps")
         assert response.status_code == 200,
             "Error message here will be displayed if the test fails."
