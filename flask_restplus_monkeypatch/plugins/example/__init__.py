@@ -1,3 +1,2 @@
 def init(app,**kwargs):
-    print("Example loaded!")
-    print(kwargs)
+    return app

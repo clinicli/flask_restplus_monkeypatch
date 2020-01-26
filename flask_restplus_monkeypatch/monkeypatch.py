@@ -4,21 +4,9 @@ from . import plugins as _plugins
 from . import const
 from . import utils
 
-def apply(app,plugins=[],exclude=[],debug=False,test=False,example=False,*args,**kwargs):
+def apply(app,plugins=[],exclude=[],*args,**kwargs):
 
-    _debug = _test = _example = False
-
-    if debug:
-        kwargs["debug"] = debug if type(debug) is dict else {}
-        _debug = True
-
-    if test:
-        kwargs["test"] = test if type(test) is dict else {}
-        _test = True
-
-    if example:
-        kwargs["example"] = example if type(example) is dict else {}
-        _example = True
+    kwargs = utils.tidy_kwargs(kwargs)
 
     if type(plugins) is str:
         plugins = [ plugins ]
@@ -29,10 +17,6 @@ def apply(app,plugins=[],exclude=[],debug=False,test=False,example=False,*args,*
         exclude = [ exclude ]
     if type(exclude) is not list:
         raise TypeError("Expected str or list for exclude, got " + str(type(exclude)))
-
-    if not _example: exclude.append(const.example)
-    if not _debug: exclude.append(const.debug)
-    if not _test: exclude.append(const.test)
 
     for p in [
             str(_)
