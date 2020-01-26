@@ -4,10 +4,10 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="flask_restplus_monkepatch",
+    name="flask_restplus_monkeypatch",
     version="0.0.1",
     author="Austin Plunkett",
-    author_email="austin.plunkett+flask_restplus_monkepatch@gmail.com",
+    author_email="austin.plunkett+flask_restplus_monkeypatch@gmail.com",
     description="Apply some necessary patches to the RESTPlus package for Flask.",
     long_description=long_description,
     long_description_content_type="text/markdown",
