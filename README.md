@@ -6,10 +6,10 @@ The reasons why this package exists are to be found here: <https://github.com/no
 
 ## How to contribute
 
-Grab a full copy of this repository:
+Fork the repository, then get hacking:
 
 ```sh
-git clone git@github.com/austinjp/flask_restplus_monkeypatch
+git clone git@github.com:you/flask_restplus_monkeypatch
 cd flask_restplus_monkeypatch
 ```
 
