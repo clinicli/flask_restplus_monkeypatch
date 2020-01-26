@@ -5,5 +5,5 @@ def init(app,**kwargs):
     argument, and MUST return the app. Any other args can be passed in **kwargs.
     """
 
-    # MUST return app:
-    return app
+    # MUST return app either alone, or as the FIRST item returned:
+    return app, 1, 2, 3
